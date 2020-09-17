@@ -46,6 +46,7 @@ def azimuth_slices(samples = 500, slices = 4, ghost_value = 0):
         f3d_array.append(f3d_partial_array.tolist())
     return(f3d_array)
 
+# Function to create bands
 def cartesian_bands(samples = 500, bands = 4, ghost_value = 0):
     sphere = appendSpherical_np(fibonacci_sphere(samples))
     f3d_array = []    
@@ -59,11 +60,28 @@ def cartesian_bands(samples = 500, bands = 4, ghost_value = 0):
         f3d_array.append(f3d_partial_array.tolist())
     return(f3d_array)
 
+# 6 sections on a peony
 
-def user_input():
+def six_sections(samples=500, ghost_value=0):
+    sphere = appendSpherical_np(fibonacci_sphere(samples))
+    f3d_array = []
+    part1 = sphere[np.argwhere((sphere[:,4]<math.pi/4) & (-math.pi<sphere[:,5]) & (sphere[:,5]<math.pi)),:]
+    part2 = sphere[np.argwhere((math.pi/4<sphere[:,4]) & (sphere[:,4]<3*math.pi/4) & (-math.pi<sphere[:,5])& (sphere[:,5]<-math.pi/2)),:]
+    part3 = sphere[np.argwhere((math.pi/4<sphere[:,4]) & (sphere[:,4]<3*math.pi/4) & (-math.pi/2<sphere[:,5])& (sphere[:,5]<0)),:]
+    part4 = sphere[np.argwhere((math.pi/4<sphere[:,4]) & (sphere[:,4]<3*math.pi/4) & (0<sphere[:,5]) & (sphere[:,5]<math.pi/2)),:]
+    part5 = sphere[np.argwhere((math.pi/4<sphere[:,4]) & (sphere[:,4]<3*math.pi/4) & (math.pi/2<sphere[:,5])& (sphere[:,5]<math.pi)),:]
+    part6 = sphere[np.argwhere((sphere[:,4]>3*math.pi/4) &(sphere[:,4]<math.pi) & (-math.pi<sphere[:,5]) & (sphere[:,5]<math.pi)),:]
+    all_parts = [part1, part2, part3, part4, part5, part6]
+    for idx, part in enumerate(all_parts):
+        a.scatter(part[:,:,0],part[:,:,1],part[:,:,2])
+        f3d_partial_array = np.hstack([part[:,:,0],part[:,:,1],part[:,:,2], idx*ghost_value*np.ones_like(part[:,:,2])])
+        f3d_array.append(f3d_partial_array.tolist())
+    return(f3d_array)
     
+# The UI.
+def user_input():
     stars_wanted = int(input("How many stars do you want?(4in/100mm normal = 120, 4in/100mm dense = 240, 5in/125mm normal = 140, 5in/125mm dense = 280, 6in/150mm normal = 160, 6in/150mm dense = 320), 7in/175mm normal = 180, 7in/175mm dense = 360: "))
-    shape_wanted = int(input("Select shape (1=Azimuth Slices(like a orange), 2=cartesian bands)): "))
+    shape_wanted = int(input("Select shape (1 = Azimuth Slices(like a orange), 2 = cartesian bands, 3 = 6 sections (like on a dice)): "))
     if shape_wanted==1:  
         slices_wanted = int(input("How many azimuth slices do you want?(Quarter peony = 4): "))
         ghost_wanted = float(input("What ghost offset do you want? (normal shell = 0, (try 0.2 for ghost)): "))
@@ -74,8 +92,16 @@ def user_input():
         ghost_wanted = float(input("What ghost offset do you want? (normal shell = 0, (try 0.2 for ghost)): "))
         print("Copy this JSON list of lists into the custom JSON field in F3D: ")
         print(cartesian_bands(stars_wanted,bands_wanted,ghost_wanted))
+    elif shape_wanted==3:
+        ghost_wanted = float(input("What ghost offset do you want? (normal shell = 0, (try 0.2 for ghost)): "))
+        print("Copy this JSON list of lists into the custom JSON field in F3D: ")
+        print(six_sections(stars_wanted,ghost_wanted))
+    else:
+        print("Not supported input, you must select input by writing tha corresponding number.")
 
 # azimuth_slices()
 # cartesian_bands()
+# six_sections()
 user_input()
+
 plt.show()
