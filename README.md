@@ -10,17 +10,19 @@ Finale3D(F3D) has a greatway of creating effects called VDL. This is the best wa
 ### Azimuth Slices
 Azimuth slice option splits the sphere in parts same way as slices in a orange. 4 slices creates a 1/4 Peony
 
-![1/4 Peony](./images/quarter_peony.jpg)
+
+<img src="./images/quarter_peony.jpg" width=400>
 
 ### Cartesian Bands
 Cartesian Bands splits the sphere evenly along one axis.
 
-![Ghost Blue to 4 Colors](./images/ghost_blue_to_4colors.jpg)
+<img src="./images/ghost_blue_to_4colors.jpg" width=400>
 
 ### Six Sided Peony
 It splits the peony in six parts like the sides on a dice but projected on a sphere. The option to select the number of parts is not possible with this shape.
 
-![Six sided peony](./images/six_sided.png)
+<img src="./images/six_sided.png" width=400>
+
 
 ## How to use the tool:
 
