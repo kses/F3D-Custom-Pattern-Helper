@@ -1,6 +1,6 @@
 # Finale3D Custom Pattern Helper
 
-Finale3D(F3D) has a greatway of creating effects called VDL. This is the best way to create effects in F3D, but it also has an effect editor for doing effects not possible to do with VDL. This is a script to create custom patterns in the editor.
+Finale3D(F3D) has a great way of creating effects called VDL. This is the best way to create effects in F3D (super fast to create a lots of effects and enables batch changes later), but it also has an effect editor for doing effects not possible to do with VDL. This is a script to create custom patterns in the editor.
 
 ## Shapes Supported
 - Azimuth Slices
