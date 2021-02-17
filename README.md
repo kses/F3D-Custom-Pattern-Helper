@@ -29,7 +29,7 @@ It splits the peony in six parts like the sides on a dice but projected on a sph
 ### Run it on your computer
 - Install Python3
 - Use pip/pip3 to install the required packages
-- Run the tool and answer on the questions.
+- Run the tool and answer the questions.
 - Copy the JSON list and paste into F3D effect editor.
 
 ### Run it online
@@ -37,7 +37,7 @@ It splits the peony in six parts like the sides on a dice but projected on a sph
 - Start a python Repl
 - Copy the code from the github to the repl
 - Press Run
-- Answer on the questions.
+- Answer the questions.
 - Copy the JSON list and paste into F3D effect editor.
 
 ## How to import it into F3D:

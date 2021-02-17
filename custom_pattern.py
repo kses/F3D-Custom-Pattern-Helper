@@ -81,7 +81,7 @@ def six_sections(samples=500, ghost_value=0):
 # The UI.
 def user_input():
     stars_wanted = int(input("How many stars do you want?(4in/100mm normal = 120, 4in/100mm dense = 240, 5in/125mm normal = 140, 5in/125mm dense = 280, 6in/150mm normal = 160, 6in/150mm dense = 320), 7in/175mm normal = 180, 7in/175mm dense = 360: "))
-    shape_wanted = int(input("Select shape (1 = Azimuth Slices(like a orange), 2 = cartesian bands, 3 = 6 sections (like on a dice)): "))
+    shape_wanted = int(input("Select shape (1 = Azimuth Slices(like an orange), 2 = cartesian bands, 3 = 6 sections (like on a dice)): "))
     if shape_wanted==1:  
         slices_wanted = int(input("How many azimuth slices do you want?(Quarter peony = 4): "))
         ghost_wanted = float(input("What ghost offset do you want? (normal shell = 0, (try 0.2 for ghost)): "))
