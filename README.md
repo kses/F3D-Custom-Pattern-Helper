@@ -36,13 +36,7 @@ Creates 2 or more parallel rings with adjustable angle between them. Useful if y
 - Run the tool and answer the questions.
 - Copy the JSON list and paste into F3D effect editor.
 
-### Run it online
-- Go to https://repl.it/
-- Start a python Repl
-- Copy the code from the github to the repl
-- Press Run
-- Answer the questions.
-- Copy the JSON list and paste into F3D effect editor.
+
 
 ## How to import it into F3D:
 Fastest way to create your effect is to create a simple effect that has the colors/stars you want. For example if you want to create a "1/4 Peony (Red, Green, Purple, Yellow)", with VDL create a "Red & Green & Purple & Yellow Peony" it is a multi color peony with the colors you want. Open the new effect in the editor. Open the "Petal", change the pattern to "custom JSON", paste the JSON list you got from the tool into the "Custom Break Pattern JSON" field.
