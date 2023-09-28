@@ -39,7 +39,7 @@ Creates 2 or more parallel rings with adjustable angle between them. Useful if y
 ## How to import it into F3D:
 Fastest way to create your effect is to create a simple effect that has the colors/stars you want. For example if you want to create a "1/4 Peony (Red, Green, Purple, Yellow)", with VDL create a "Red & Green & Purple & Yellow Peony" it is a multi color peony with the colors you want. Give it all data you need to use it such as PFT. Open the new effect in the editor. Open the "Break Pattern", change the pattern to "custom JSON", paste the JSON list you got from the tool into the "Custom Break Pattern JSON" field.
 
-![Effect Editor](./images/editor_w_comments.png)
+![Effect Editor](./images/editor_w_comments_updated.png)
 
 ### Examples
 
