@@ -36,10 +36,13 @@ Creates 2 or more parallel rings with adjustable angle between them. Useful if y
 - Run the tool and answer the questions.
 - Copy the JSON list and paste into F3D effect editor.
 
-### Examples
-In the example folder you can find some common examples.
-
 ## How to import it into F3D:
-Fastest way to create your effect is to create a simple effect that has the colors/stars you want. For example if you want to create a "1/4 Peony (Red, Green, Purple, Yellow)", with VDL create a "Red & Green & Purple & Yellow Peony" it is a multi color peony with the colors you want. Open the new effect in the editor. Open the "Petal", change the pattern to "custom JSON", paste the JSON list you got from the tool into the "Custom Break Pattern JSON" field.
+Fastest way to create your effect is to create a simple effect that has the colors/stars you want. For example if you want to create a "1/4 Peony (Red, Green, Purple, Yellow)", with VDL create a "Red & Green & Purple & Yellow Peony" it is a multi color peony with the colors you want. Give it all data you need to use it such as PFT. Open the new effect in the editor. Open the "Break Pattern", change the pattern to "custom JSON", paste the JSON list you got from the tool into the "Custom Break Pattern JSON" field.
 
 ![Effect Editor](./images/editor_w_comments.png)
+
+### Examples
+
+In the examples folder you can find a few common effect patterns for a few calibers/star counts. Select the one you want and use the copy button shown below, then paste it info F3D as explained above.
+
+![Example](./images/copy_example.png)

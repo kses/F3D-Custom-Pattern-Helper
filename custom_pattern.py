@@ -61,4 +61,4 @@ def user_input():
 # parallel_rings()
 user_input()
 
-plt.show()
+patterns.plt.show()
