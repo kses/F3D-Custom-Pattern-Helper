@@ -33,7 +33,7 @@ Creates 2 or more parallel rings with adjustable angle between them. Useful if y
 ### Run it on your computer
 - Install Python3
 - Use pip/pip3 to install the required packages
-- Run the tool and answer the questions.
+- Run the tool and answer the questions (e.g. python3 custom_pattern.py).
 - Copy the JSON list and paste into F3D effect editor.
 
 ## How to import it into F3D:
